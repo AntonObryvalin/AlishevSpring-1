@@ -8,9 +8,9 @@ public class TestSpring {
         // Это файл конфигурации Spring, где указаны бины (объекты), которые нужно создать.
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml");
-
-        Computer computer = context.getBean("computer", Computer.class);
-        System.out.println(computer);
+        MusicPlayer player = context.getBean("musicPlayer", MusicPlayer.class);
+        player.playMusic(EnumMusic.CLASSICAL);
+        player.playMusic(EnumMusic.ROCK);
 
 
 
